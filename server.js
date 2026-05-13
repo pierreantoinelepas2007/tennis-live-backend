@@ -44,3 +44,6 @@ app.get('/api/player/:aftId/matches', async (req, res) => {
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Backend TennisLive sur http://localhost:${PORT}`));
+app.get('/ping', (req, res) => {
+  res.json({ status: 'ok', time: Date.now() });
+});
